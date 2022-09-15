@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Superplay/Scenes/00-main_scene.unity
+    guid: 1b5092ddc6f914e0dbedbc371f4a1df9
   m_configObjects: {}
