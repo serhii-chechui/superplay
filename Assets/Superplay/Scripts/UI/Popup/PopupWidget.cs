@@ -10,6 +10,9 @@ namespace Superplay.UI.Popup
         [SerializeField]
         private Button claimButton;
 
+        [SerializeField]
+        private Image shroudImage;
+
         public void Initialize(PopupWidgetData data)
         {
             base.Initialize(data);

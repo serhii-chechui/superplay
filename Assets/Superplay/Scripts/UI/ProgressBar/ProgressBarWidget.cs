@@ -17,6 +17,9 @@ namespace Superplay.UI.ProgressBar
         [Header("Debug")]
         [SerializeField]
         private Button zeroButton;
+        
+        [SerializeField]
+        private Button diceButton;
     
         [SerializeField]
         private Button completeButton;
@@ -45,6 +48,12 @@ namespace Superplay.UI.ProgressBar
             {
                 _progressSlider.SetProgress(0);
             });
+            
+            diceButton.onClick.AddListener(delegate
+            {
+                var randomValue = Random.Range(0f, 1f);
+                _progressSlider.SetProgress(randomValue);
+            });
         
             completeButton.onClick.AddListener(delegate
             {
@@ -58,6 +67,7 @@ namespace Superplay.UI.ProgressBar
             _progressSlider.Dismiss();
         
             zeroButton.onClick.RemoveAllListeners();
+            diceButton.onClick.RemoveAllListeners();
             completeButton.onClick.RemoveAllListeners();
         }
     
